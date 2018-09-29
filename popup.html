@@ -4,23 +4,99 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="/fontello/css/fontello.css" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+        }
         #ee-extension-container {
             display: flex;
             flex-direction: column;
         }
         #ee-extension-nav {
+            display: flex;
+            align-items: baseline;
             font-family: 'Indie Flower', cursive;
             white-space: nowrap;
             font-size: 2em;
+            color: #ffffff;
+            background: linear-gradient(120deg, #0fb8ad 0%, #1fc8db 50%, #2cb5e8 75%);
+            padding: 5px 0 5px 20px;
         }
+
+        #ee-extension-nav > i {
+            font-size: 1.1em;
+            margin: 0 0 0 1em;
+            cursor: pointer;
+        }
+
+        #ee-extension-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #ee-form-title {
+            margin: 5px;
+        }
+
+        #ee-form-title > p {
+            padding: 0 5px;
+            text-align: center;
+        }
+
+        input {
+            margin: 5px;
+            outline: none;
+            padding: 0.2em;
+        }
+
+        input:focus {
+            border: 1px solid #0fb8ad;
+        }
+
+        button {
+            margin: 5px 5px 10px 5px;
+            background-color: #2cb5e8;
+            color: #ffffff;
+            padding:0.35em 1.2em;
+            border:0.1em solid #FFFFFF;
+            border-radius:0.4em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-weight:300;
+            text-align:center;
+            cursor: pointer;
+        }
+
+        button:hover {
+            font-weight:500;
+            background-color: #1fc8db;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            background: #393939;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 <div id="ee-extension-container">
-    <div id="ee-extension-nav">English-essence</div>
+    <div id="ee-extension-nav">English-essence
+        <i id="ee-close-button" class="icon-cancel-1"></i>
+    </div>
     <div id="ee-extension-content"></div>
-    <footer></footer>
+    <footer>www.english-essence.com</footer>
 </div>
 <script src="popup.js"></script>
 </body>

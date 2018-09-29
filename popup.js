@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Variables
     const contentWrapper = document.getElementById('ee-extension-content');
+    const closeButton = document.getElementById('ee-close-button');
     const loginBtnId = 'login-btn';
     const logoutBtnId = 'logout-btn';
     const emailFieldId = 'email';
@@ -10,20 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const tokenKey = 'english_essence_token';
     const appURL = 'http://172.19.0.6';
 
-    const logoutView = '<div><p>You are login</p></div>' +
+    const logoutView = '<div id="ee-form-title"><p>You are login. Simply select word, right click on it and add to your dictionary.</p></div>' +
         '<button id="logout-btn">Logout</button>';
 
-    const loginView = '<div><p>Please login in</p>' +
+    const loginView = '<div id="ee-form-title"><p>Please login in or create account <a href=\' + appURL + \'/register id="register-link">Register</a></p>' +
         '<form action="">' +
-        '<label for="email">Email</label>' +
-        '<input type="email" id="email" name="email">' +
-        '<label for="password">Password</label>' +
-        '<input type="password" id="password" name="password">' +
+        '<input type="email" id="email" name="email" placeholder="email">' +
+        '<input type="password" id="password" name="password" placeholder="password">' +
         '<button id="login-btn">Login</button>' +
         '</form>' +
-        '<p>or create account <a href=' + appURL + '/register id="register-link">Register</a></p>' +
         '</div>';
-
     const LOGIN_NOTIFICATION = 'login-notification';
     const LOGOUT_NOTIFICATION = 'logout-notification';
     const BAD_CREDENTIALS_NOTIFICATION = 'bad-credentials-notification';
@@ -47,21 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     //App init
-
     initView();
+    closeButton.addEventListener('click', function () {
+        window.close();
+    });
 
     // Functions
 
     function initView() {
         let view = loginView;
-        if(isTokenSet()){
+        if (isTokenSet()) {
             view = logoutView;
         }
         contentWrapper.innerHTML = view;
     }
 
     function isTokenSet() {
-       return localStorage.getItem(tokenKey);
+        return localStorage.getItem(tokenKey);
     }
 
     function storeToken(token) {
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const response = JSON.parse(xhr.response);
                 callbackSuccess(response);
-            } else if (xhr.readyState === 4 && xhr.status === 401){
+            } else if (xhr.readyState === 4 && xhr.status === 401) {
                 createNotification(BAD_CREDENTIALS_NOTIFICATION, badCredentialsNotificationParams);
             }
         };
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event listeners
 
     document.getElementById('ee-extension-content').addEventListener('click', function (event) {
-        if(event.target && event.target.id === loginBtnId){
+        if (event.target && event.target.id === loginBtnId) {
             event.preventDefault();
             const method = 'POST';
             const url = 'http://172.20.1.1/api/auth/login';
@@ -108,12 +107,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 createNotification(LOGIN_NOTIFICATION, loginNotificationParams)
             };
             APIRequest(method, url, params, callbackSuccess)
-        } else if (event.target && event.target.id === logoutBtnId){
+        } else if (event.target && event.target.id === logoutBtnId) {
             alert('invalidate token request should be here');
             removeToken();
             initView();
             createNotification(LOGOUT_NOTIFICATION, logoutNotificationParams)
-        } else if (event.target && event.target.id === registerLink){
+        } else if (event.target && event.target.id === registerLink) {
             chrome.tabs.create({active: true, url: appURL + '/register'})
         }
     });
