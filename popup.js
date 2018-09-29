@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function initView() {
         let view = loginView;
-        if (isTokenSet()) {
+        if (getToken()) {
             view = logoutView;
         }
         contentWrapper.innerHTML = view;
     }
 
-    function isTokenSet() {
+    function getToken() {
         return localStorage.getItem(tokenKey);
     }
 
@@ -90,6 +90,16 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.send(JSON.stringify(params));
     }
 
+    function logoutRequest() {
+        const method = 'POST';
+        const url = 'http://172.20.1.1/api/auth/logout';
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url, true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + getToken());
+        xhr.send();
+    }
+
     // Event listeners
 
     document.getElementById('ee-extension-content').addEventListener('click', function (event) {
@@ -108,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
             APIRequest(method, url, params, callbackSuccess)
         } else if (event.target && event.target.id === logoutBtnId) {
-            alert('invalidate token request should be here');
+            logoutRequest();
             removeToken();
             initView();
             createNotification(LOGOUT_NOTIFICATION, logoutNotificationParams)
