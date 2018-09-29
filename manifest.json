@@ -9,6 +9,6 @@
   "browser_action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "contextMenus", "notifications", "http://172.19.0.6/*", "https://jsonplaceholder.typicode.com/*"],
+  "permissions": ["activeTab", "contextMenus", "notifications", "http://172.20.1.1/*", "https://jsonplaceholder.typicode.com/*"],
   "manifest_version": 2
 }
