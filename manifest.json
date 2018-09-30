@@ -13,6 +13,6 @@
   "browser_action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "contextMenus", "notifications", "http://172.20.1.1/*", "http://english-essence.herokuapp.com*"],
+  "permissions": ["activeTab", "contextMenus", "notifications", "http://172.20.1.1/*", "http://english-essence.herokuapp.com/*"],
   "manifest_version": 2
 }
