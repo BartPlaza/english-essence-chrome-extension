@@ -2,6 +2,10 @@
   "name": "english-essence-chrome-extension",
   "version": "1.0",
   "description": "Add-on for adding words to english-essence app",
+  "icons": {
+    "48": "/images/logo48.png",
+    "128": "/images/logo128.png"
+  },
   "background": {
     "scripts": ["contextMenu.js"],
     "persistent": false
