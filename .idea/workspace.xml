@@ -65,17 +65,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="494" />
-          <entry key="js" value="1563" />
+          <entry key="js" value="1610" />
           <entry key="json" value="28" />
-          <entry key="txt" value="71" />
+          <entry key="txt" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="494" />
           <entry key="JSON" value="28" />
-          <entry key="JavaScript" value="1563" />
-          <entry key="PLAIN_TEXT" value="71" />
+          <entry key="JavaScript" value="1610" />
+          <entry key="PLAIN_TEXT" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,26 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312455">
+            <state relative-caret-position="486">
               <caret line="16458" column="4" selection-start-line="16458" selection-start-column="4" selection-end-line="16458" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" selection-start-line="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -131,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+            <state relative-caret-position="608">
+              <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -140,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/popup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="82" column="61" lean-forward="true" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+            <state relative-caret-position="209">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -149,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contextMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1114">
-              <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="70" />
+            <state relative-caret-position="1843">
+              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -191,8 +173,8 @@
         <option value="$PROJECT_DIR$/parentContextMenu.js" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/login.js" />
-        <option value="$PROJECT_DIR$/contextMenu.js" />
         <option value="$PROJECT_DIR$/popup.html" />
+        <option value="$PROJECT_DIR$/contextMenu.js" />
         <option value="$PROJECT_DIR$/popup.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
       </list>
@@ -223,6 +205,11 @@
             <path>
               <item name="english-essence-chrome-extension" type="b2602c69:ProjectViewProjectNode" />
               <item name="english-essence-chrome-extension" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="english-essence-chrome-extension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="english-essence-chrome-extension" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,7 +253,7 @@
       <workItem from="1535230130666" duration="3981000" />
       <workItem from="1535894983635" duration="28130000" />
       <workItem from="1538206917021" duration="6340000" />
-      <workItem from="1538227170494" duration="15232000" />
+      <workItem from="1538227170494" duration="16422000" />
     </task>
     <task id="LOCAL-00001" summary="Handle token refresh request">
       <created>1538231632865</created>
@@ -289,11 +276,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538255797835</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add logo">
+      <created>1538298670240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1538298670240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Prepare for deploy on heroku">
+      <created>1538299248094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538299248094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71252000" />
+    <option name="totallyTimeSpent" value="72442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -357,20 +358,29 @@
     <MESSAGE value="Handle token refresh request" />
     <MESSAGE value="Add styling" />
     <MESSAGE value="Handle logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Handle logout" />
+    <MESSAGE value="Add logo" />
+    <MESSAGE value="Prepare for deploy on heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare for deploy on heroku" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312455">
-          <caret line="16458" column="4" selection-start-line="16458" selection-start-column="4" selection-end-line="16458" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contextMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1843">
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -388,24 +398,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contextMenu.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1114">
-          <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="70" />
+        <state relative-caret-position="486">
+          <caret line="16458" column="4" selection-start-line="16458" selection-start-column="4" selection-end-line="16458" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="82" column="61" lean-forward="true" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/popup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+        <state relative-caret-position="209">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="56" />
         </state>
       </provider>
     </entry>
