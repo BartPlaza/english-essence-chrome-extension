@@ -1,4 +1,5 @@
 const tokenKey = 'english_essence_token';
+const appURL = 'http://english-essence.herokuapp.com';
 
 const MAIN_MENU = 'main-menu';
 const ADD_TO_PL_MENU = 'add-to-pl-menu';
@@ -66,7 +67,7 @@ function createNotification(name, params) {
 
 function addWordRequest(params = null, isAfterRefreshRequest = false) {
     const method = 'POST';
-    const url = 'http://172.20.1.1/api/words';
+    const url = appURL + '/api/words';
     const xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
     xhr.setRequestHeader('Content-type', 'application/json');
@@ -94,7 +95,7 @@ function addWordRequest(params = null, isAfterRefreshRequest = false) {
 function refreshTokenRequest() {
     return new Promise(function(resolve, reject){
         const method = 'GET';
-        const url = 'http://172.20.1.1/api/auth/refresh';
+        const url = appURL + '/api/auth/refresh';
         const xhr = new XMLHttpRequest();
         xhr.open(method, url, true);
         xhr.setRequestHeader('Content-type', 'application/json');

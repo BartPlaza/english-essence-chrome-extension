@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const registerLink = 'register-link';
 
     const tokenKey = 'english_essence_token';
-    const appURL = 'http://172.19.0.6';
+    const appURL = 'http://english-essence.herokuapp.com';
 
     const logoutView = '<div id="ee-form-title"><p>You are login. Simply select word, right click on it and add to your dictionary.</p></div>' +
         '<button id="logout-btn">Logout</button>';
 
     const loginView = '<div id="ee-form-title"><p>Please login in or create account <a href=\' + appURL + \'/register id="register-link">Register</a></p>' +
-        '<form action="">' +
+        '<form>' +
         '<input type="email" id="email" name="email" placeholder="email">' +
         '<input type="password" id="password" name="password" placeholder="password">' +
         '<button id="login-btn">Login</button>' +
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function logoutRequest() {
         const method = 'POST';
-        const url = 'http://172.20.1.1/api/auth/logout';
+        const url = appURL + '/api/auth/logout';
         const xhr = new XMLHttpRequest();
         xhr.open(method, url, true);
         xhr.setRequestHeader('Content-type', 'application/json');
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target && event.target.id === loginBtnId) {
             event.preventDefault();
             const method = 'POST';
-            const url = 'http://172.20.1.1/api/auth/login';
+            const url = appURL + 'api/auth/login';
             const params = {
                 email: document.getElementById(emailFieldId).value,
                 password: document.getElementById(passwordFieldId).value
