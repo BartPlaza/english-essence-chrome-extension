@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target && event.target.id === loginBtnId) {
             event.preventDefault();
             const method = 'POST';
-            const url = appURL + 'api/auth/login';
+            const url = appURL + '/api/auth/login';
             const params = {
                 email: document.getElementById(emailFieldId).value,
                 password: document.getElementById(passwordFieldId).value

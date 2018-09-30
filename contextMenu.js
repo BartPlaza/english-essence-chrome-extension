@@ -1,9 +1,9 @@
 const tokenKey = 'english_essence_token';
 const appURL = 'http://english-essence.herokuapp.com';
 
-const MAIN_MENU = 'main-menu';
-const ADD_TO_PL_MENU = 'add-to-pl-menu';
-const ADD_TO_EN_MENU = 'add-to-en-menu';
+const MAIN_MENU = 'ee-main-menu';
+const ADD_TO_PL_MENU = 'ee-add-to-pl-menu';
+const ADD_TO_EN_MENU = 'ee-add-to-en-menu';
 
 const ADD_WORD_NOTIFICATION = 'add-word-notification';
 const PLEASE_LOGIN_NOTIFICATION = 'please-login-notification';
@@ -121,6 +121,7 @@ function refreshTokenRequest() {
     });
 }
 
+chrome.contextMenus.removeAll();
 chrome.contextMenus.create(parentContextMenu);
 chrome.contextMenus.create(addToPolishDictionaryItem);
 chrome.contextMenus.create(addToEnglishDictionaryItem);
